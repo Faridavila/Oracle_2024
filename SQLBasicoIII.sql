@@ -29,3 +29,32 @@ WITH Numbers AS(
 SELECT x,
 RANK() OVER (ORDER BY x ASC) AS rank
 FROM Numbers;
+
+REM segunda
+
+WITH Numbers AS(
+  SELECT DISTINCT 1 AS  x
+  FROM employees
+  UNION ALL 
+  SELECT DISTINCT 2
+  FROM employees
+  UNION ALL 
+  SELECT DISTINCT 2
+  FROM employees
+  UNION ALL 
+  SELECT DISTINCT 5
+  FROM employees
+  UNION ALL 
+  SELECT DISTINCT 8
+  FROM employees
+  UNION ALL 
+  SELECT DISTINCT 10
+  FROM employees
+  UNION ALL 
+  SELECT DISTINCT 10
+  FROM employees
+
+)
+SELECT x,
+DENSE_RANK() OVER (ORDER BY x ASC) AS desen_rank
+FROM Numbers;
