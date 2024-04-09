@@ -1,0 +1,31 @@
+WITH Numbers AS(
+  SELECT DISTINCT 1 AS  x
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 2
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 2
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 5
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 8
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 10
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 10
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 10
+  FROM departments
+  UNION ALL
+  SELECT DISTINCT 11
+  FROM departments
+)
+SELECT x,
+RANK() OVER (ORDER BY x ASC) AS rank
+FROM Numbers;
