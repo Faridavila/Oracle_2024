@@ -1,3 +1,9 @@
+
+-------------------------------
+--  Alejandro Ceron Gonzalez --
+--  230192010                --
+-------------------------------
+
 WITH Numbers AS(
   SELECT DISTINCT 1 AS  x
   FROM departments
@@ -35,22 +41,22 @@ REM segunda
 WITH Numbers AS(
   SELECT DISTINCT 1 AS  x
   FROM employees
-  UNION ALL 
+  UNION ALL
   SELECT DISTINCT 2
   FROM employees
-  UNION ALL 
+  UNION ALL
   SELECT DISTINCT 2
   FROM employees
-  UNION ALL 
+  UNION ALL
   SELECT DISTINCT 5
   FROM employees
-  UNION ALL 
+  UNION ALL
   SELECT DISTINCT 8
   FROM employees
-  UNION ALL 
+  UNION ALL
   SELECT DISTINCT 10
   FROM employees
-  UNION ALL 
+  UNION ALL
   SELECT DISTINCT 10
   FROM employees
 
